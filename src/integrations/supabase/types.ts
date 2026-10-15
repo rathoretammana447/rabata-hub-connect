@@ -49,7 +49,16 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      submit_enquiry: {
+        Args: {
+          p_consent: boolean
+          p_details: Json
+          p_email: string
+          p_kind: string
+          p_name: string
+        }
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never
