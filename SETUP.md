@@ -6,11 +6,12 @@
 - Contact, student and volunteer forms validate input in the browser and on the server, then store it privately in Lovable Cloud.
 - View received enquiries in Lovable: More → Database → enquiries. The public website cannot read these records. No public admin account is created.
 - Fixed-recipient email links open a visitor’s email app addressed to rathoretammana447@gmail.com.
+- New enquiries trigger a private notification from the connected Gmail account to the fixed owner email. Storage succeeds independently of email; if Gmail is unavailable, review the enquiry in Lovable Cloud.
 - Both supplied Instagram accounts are linked exactly as requested.
 - Free publisher resources support search, subject, class and type filters. A selected video opens a privacy-enhanced YouTube embed; PDF links open the publisher’s files.
 
 ## Remaining configuration
-- Automatic forwarding/alerts to Gmail are NOT enabled. Set up an email sender domain you own using the email setup card, verify its DNS, then ask Lovable to connect submission notifications. Your Gmail address can receive alerts but cannot be a verified sender domain.
+- Keep the Gmail connection authorized with permission to send. Gmail notifications use the connected account and do not require a separate sender domain. No visitor can choose the notification recipient or access your inbox through the website.
 - No YouTube, Facebook or WhatsApp organization profile was provided. Send the real URLs to add them; no profiles have been invented.
 - No payment account or donation details were provided. Financial support is discussed via contact, not collected online.
 - Review safeguarding and privacy wording before public launch, verify permissions for supplied poster imagery, and replace the clearly labelled illustrative classroom with a consented real photograph when available.
