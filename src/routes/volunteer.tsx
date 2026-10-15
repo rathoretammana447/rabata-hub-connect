@@ -1,0 +1,6 @@
+import { createFileRoute } from '@tanstack/react-router'
+import { PageHeading } from '@/components/site-shell'
+import { EnquiryForm } from '@/components/enquiry-form'
+import { pageHead } from '@/lib/site'
+export const Route=createFileRoute('/volunteer')({head:()=>pageHead('Volunteer to Teach','Share your knowledge and volunteer as a teacher or mentor with Rabata in Derabassi, Punjab.'),component:Volunteer})
+function Volunteer(){return <><PageHeading eyebrow="Share what you know" title="Be the reason a child believes." description="A few hours, a patient explanation, a word of encouragement. Your contribution can open a new door."/><section className="section"><div className="container form-layout"><div className="form-aside"><h2>Your time has<br/>the power to change things.</h2><p>We welcome educators, students and professionals who want to support children in academics, spoken English, digital literacy and life skills.</p><p>Tell us about your skills, preferred classes and availability. New volunteers are welcome; all applications are reviewed before teaching begins.</p><p>Volunteers must be 18 or older and agree to child-safeguarding expectations. No unsupervised contact with children is arranged through this form.</p></div><EnquiryForm kind="volunteer"/></div></section></>}
