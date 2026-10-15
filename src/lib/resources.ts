@@ -1,0 +1,10 @@
+export const resources = [
+ {id:'english-workbook',title:'Words and Expressions',description:'NCERT’s English workbook: reading, vocabulary and language practice.',publisher:'NCERT',subject:'English',level:'9',type:'PDF',url:'https://ncert.nic.in/textbook/pdf/iewe101.pdf'},
+ {id:'science',title:'Matter in Our Surroundings',description:'Explore matter, particles and the states of matter with NCERT.',publisher:'NCERT',subject:'Science',level:'9',type:'PDF',url:'https://ncert.nic.in/textbook/pdf/iesc101.pdf'},
+ {id:'computers',title:'Computer Concepts',description:'An introduction to computers, digital tools and everyday technology.',publisher:'NIELIT',subject:'Digital literacy',level:'All',type:'PDF',url:'https://www.nielit.gov.in/sites/default/files/Patna/CCC.pdf'},
+ {id:'grammar',title:'Introduction to Grammar',description:'Discover how language works with an introductory grammar lesson.',publisher:'Khan Academy',subject:'English',level:'All',type:'Video',url:'https://www.youtube.com/watch?v=O-6q-siuMik',video:'O-6q-siuMik'},
+ {id:'career',title:'Career and Interview Skills',description:'Free guidance on resumes, interviews and getting ready for work.',publisher:'GCFGlobal',subject:'Career readiness',level:'All',type:'Guide',url:'https://edu.gcfglobal.org/en/topics/career/'},
+ {id:'spoken',title:'Speaking Practice',description:'Free speaking activities, videos and practice by language level.',publisher:'British Council',subject:'English',level:'All',type:'Activities',url:'https://learnenglish.britishcouncil.org/skills/speaking'},
+ {id:'worksheets',title:'Grammar Practice & Worksheets',description:'Grammar explanations, practice exercises and printable worksheets.',publisher:'British Council',subject:'English',level:'All',type:'Worksheets',url:'https://learnenglishkids.britishcouncil.org/grammar-vocabulary/grammar-practice'},
+ {id:'quizzes',title:'English Vocabulary Games',description:'Learn new words through interactive vocabulary activities.',publisher:'British Council',subject:'English',level:'All',type:'Quiz',url:'https://learnenglishkids.britishcouncil.org/grammar-vocabulary/word-games'},
+]

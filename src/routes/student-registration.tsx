@@ -1,0 +1,7 @@
+import { createFileRoute } from '@tanstack/react-router'
+import { ShieldCheck } from 'lucide-react'
+import { PageHeading } from '@/components/site-shell'
+import { EnquiryForm } from '@/components/enquiry-form'
+import { pageHead } from '@/lib/site'
+export const Route=createFileRoute('/student-registration')({head:()=>pageHead('Student Registration','Register interest in Rabata’s free educational support. Parents and guardians can safely request support for a child.'),component:Students})
+function Students(){return <><PageHeading eyebrow="Every learner belongs" title="Your learning journey starts here." description="Free educational support, a friendly community and someone who believes in your potential."/><section className="section"><div className="container form-layout"><div className="form-aside"><h2>A little support.<br/>New possibilities.</h2><p>Tell us which subjects you need help with and how you prefer to learn. Tammana will contact your parent or guardian to discuss suitable support and availability.</p><p><ShieldCheck className="inline mr-2" size={17}/>For children under 18, this form must be completed by a parent or legal guardian. Adult learners may register themselves.</p><p>Only a first name and guardian contact are needed. Please do not send a child’s personal phone number, home address or identity documents.</p></div><EnquiryForm kind="student"/></div></section></>}

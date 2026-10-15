@@ -1,24 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+import { createFileRoute, Link } from '@tanstack/react-router'
+import { ArrowRight, BookOpen, GraduationCap, Heart, Leaf, ShieldCheck, Sprout, Users } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import classroom from '@/assets/classroom.jpg'
+import food from '@/assets/food-drive.jpeg.asset.json'
+import { pageHead } from '@/lib/site'
+export const Route = createFileRoute('/')({head:()=>pageHead('Connecting Education with Opportunity','Rabata provides free learning, English communication and life skills for underprivileged children in Derabassi, Punjab.'),component:Index})
+function Index(){return <>
+ <section className="hero"><img className="hero-image" src={classroom} alt="Illustrative scene of children learning together with an educator" width={1920} height={1024}/><div className="hero-shade"/><div className="container hero-content"><div className="eyebrow"><span className="h-px w-7 bg-gold"/> Small beginnings. Lasting change.</div><h1>Rabata.<br/>Connecting education<br/>with <em>opportunity.</em></h1><p className="hero-copy">Every child deserves the chance to learn, grow and build a better future. Together, we’re making that chance a reality.</p><div className="hero-actions"><Button asChild size="lg" variant="secondary"><Link to="/student-registration"><BookOpen/> Learn with Rabata <ArrowRight/></Link></Button><Button asChild size="lg" variant="hero"><Link to="/volunteer"><Heart/> Volunteer with us</Link></Button></div><div className="hero-note"><ShieldCheck size={13}/> Free learning. Real support. Every child matters.</div></div><span className="hero-caption">Illustrative learning scene</span></section>
+ <section className="pillars"><div className="container pillars-inner"><div className="pillar"><BookOpen/><div><h3>Educate</h3><p>Strong foundations. Open minds.</p></div></div><div className="pillar"><Sprout/><div><h3>Empower</h3><p>Skills, confidence and self-belief.</p></div></div><div className="pillar"><GraduationCap/><div><h3>Elevate</h3><p>From learning to a better life.</p></div></div></div></section>
+ <section className="section"><div className="container intro-grid"><div className="intro-text"><div className="eyebrow"><Leaf size={13}/> A connection that changes lives</div><h2>A small initiative.<br/>A belief without limits.</h2><p>Founded by Tammana Rathore, Rabata is a community-led initiative in Derabassi, Punjab. We offer free educational support to children whose circumstances should never define their future.</p><Link to="/about" className="text-link">Get to know Rabata <ArrowRight size={15}/></Link></div><div className="impact-mini"><div><strong>10–15</strong><span>children learning with us</span><small>As reported in our organization profile</small></div><div><strong>100%</strong><span>free educational support</span></div><div><strong>One</strong><span>community. Shared possibilities.</span></div><div><strong>Beyond</strong><span>textbooks. Towards life.</span></div></div></div></section>
+ <section className="section section-soft"><div className="container"><div className="section-head"><div><div className="eyebrow">Learning is just the beginning</div><h2>Building brighter futures, together.</h2><p className="section-copy">The knowledge to learn. The confidence to grow. The skills to move forward.</p></div><Link to="/learn" className="text-link">Explore learning resources <ArrowRight size={15}/></Link></div><div className="card-grid"><article className="program-card"><div className="card-icon"><BookOpen/></div><h3>Education for every child</h3><p>Free academic support in English, Science and more. A friendly space to ask questions and discover new possibilities.</p><Link to="/learn" className="text-link">Start learning <ArrowRight size={14}/></Link></article><article className="program-card"><div className="card-icon"><Users/></div><h3>Confidence for life</h3><p>Spoken English, communication and everyday skills that help young people find their voice and believe in themselves.</p><Link to="/skills" className="text-link">Explore our programmes <ArrowRight size={14}/></Link></article><article className="program-card"><div className="card-icon"><GraduationCap/></div><h3>A bridge to opportunity</h3><p>Career awareness, interview preparation and practical guidance to connect classroom learning with the world beyond.</p><Link to="/skills" className="text-link">Discover career support <ArrowRight size={14}/></Link></article></div></div></section>
+ <section className="section"><div className="container community-grid"><img className="community-photo" src={food.url} alt="Rabata’s supplied food donation drive poster" loading="lazy" width={1024} height={1536}/><div><div className="eyebrow"><Heart size={13}/> Care beyond the classroom</div><h2>Small meals.<br/>Big smiles.</h2><p>Learning thrives where there is care. Our community food drives bring freshly prepared meals and a little warmth to children who need them.</p><Link to="/community" className="text-link">See our community initiatives <ArrowRight size={15}/></Link></div></div></section>
+ <section className="cta-band"><div className="container cta-inner"><div><h2>A little of your time. A lifetime of difference.</h2><p>Teach, mentor, share resources or simply help us spread the word.</p></div><Button asChild size="lg" variant="secondary"><Link to="/get-involved">Be a part of Rabata <ArrowRight/></Link></Button></div></section>
+ </>}

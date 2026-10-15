@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Use shared Header, Footer and PageHeading from site-shell for public pages, keeping navigation consistent.
+- All public enquiry forms use the shared Zod schema and server-only intake RPC; submissions have no browser grants or read policies, protecting children's information.
+- Maintain learning resources in src/lib/resources.ts and page metadata in each leaf route; external resources must identify their publisher.
+- Do not claim automatic email notifications are active until a sender domain is configured and delivery is verified; direct email links are independent.
