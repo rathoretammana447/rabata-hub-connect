@@ -5,3 +5,4 @@
 - [ ] Link email and both Instagram accounts.
 - [ ] Verify navigation, forms and mobile layout; document remaining setup.
 - [ ] Connect requested Gmail account and send fixed-recipient enquiry alerts.
+- [ ] Add the supplied classroom photo to the homepage and change the contact and enquiry-notification email.

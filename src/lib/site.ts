@@ -1,5 +1,5 @@
 export const site = {
- name: 'Rabata', email: 'rathoretammana447@gmail.com',
+ name: 'Rabata', email: 'rabataofficial111@gmail.com',
  instagram: 'https://www.instagram.com/rabata._.official/',
  founderInstagram: 'https://www.instagram.com/rathore._.tammana/',
 }
