@@ -14,6 +14,33 @@ export type Database = {
   }
   public: {
     Tables: {
+      app_profiles: {
+        Row: {
+          created_at: string
+          display_name: string
+          location: string | null
+          phone: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string
+          location?: string | null
+          phone?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string
+          location?: string | null
+          phone?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       enquiries: {
         Row: {
           consent: boolean
@@ -44,11 +71,60 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          id: string
+          requested_at: string
+          reviewed_at: string | null
+          reviewed_by: string | null
+          role: Database["public"]["Enums"]["app_role"]
+          status: Database["public"]["Enums"]["role_status"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          requested_at?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          role: Database["public"]["Enums"]["app_role"]
+          status?: Database["public"]["Enums"]["role_status"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          requested_at?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          role?: Database["public"]["Enums"]["app_role"]
+          status?: Database["public"]["Enums"]["role_status"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
+      bootstrap_initial_admin: { Args: never; Returns: string }
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      request_app_role: {
+        Args: { p_role: Database["public"]["Enums"]["app_role"] }
+        Returns: Database["public"]["Enums"]["role_status"]
+      }
+      review_app_role: {
+        Args: {
+          p_decision: Database["public"]["Enums"]["role_status"]
+          p_role_id: string
+        }
+        Returns: Database["public"]["Enums"]["role_status"]
+      }
       submit_enquiry: {
         Args: {
           p_consent: boolean
@@ -61,7 +137,8 @@ export type Database = {
       }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "mentor" | "student"
+      role_status: "pending" | "active" | "rejected"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -188,6 +265,9 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "mentor", "student"],
+      role_status: ["pending", "active", "rejected"],
+    },
   },
 } as const

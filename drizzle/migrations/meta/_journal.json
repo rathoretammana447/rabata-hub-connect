@@ -15,6 +15,13 @@
       "when": 1792064980497,
       "tag": "0001_rate_limited_enquiry_intake",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795097447294,
+      "tag": "0002_rabata_account_roles",
+      "breakpoints": true
     }
   ]
 }
