@@ -6,3 +6,4 @@
 - [x] Verify navigation, forms and mobile layout; document remaining setup.
 - [x] Connect requested Gmail account and send fixed-recipient enquiry alerts.
 - [x] Add the supplied classroom photo to the homepage and change the contact and enquiry-notification email.
+- [ ] Build private student profiles, assigned-mentor access, assessments, attendance, skills, goals, feedback and printable progress reports.
